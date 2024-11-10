@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="form.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    footer {
+
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer-menu ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer-menu ul li {
+
+      margin: 0 10px;
+    }
+
+    .footer-menu ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+
+
+    .menu {
+      list-style: none;
+      padding: 0;
+
+    }
+
+    .menu li {
+      position: relative;
+    }
+
+    .menu a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgb(6, 90, 16);
+      min-width: 160px;
+      border: solid 4px rgb(4, 44, 9);
+    }
+
+    .menu li:hover .dropdown-content {
+      display: block;
+    }
+
+
+    .menu {
+      list-style: none;
+      padding: 0;
+      text-align: right;
+      /* Menüyü sağa hizala */
+    }
+
+    .menu li {
+      position: relative;
+      display: inline-block;
+    }
+
+    .menu a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      /* Menüyü sağ taraftan açılacak şekilde konumlandır */
+      background-color: rgb(6, 90, 16);
+      min-width: 160px;
+    }
+
+    .menu li:hover .dropdown-content {
+      display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+      .menu {
+        text-align: left;
+        /* Ekran küçüldüğünde menüyü sola hizala */
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    javascript document.getElementById('menu-toggle').addEventListener('click', function() {
+        var menu=document.querySelector('.mobile-menu');
+        menu.classList.toggle('active');
+      });
+
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+      width: 20%;
+      padding: 5px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type=text]:focus {
+      width: 100px;
+      background-color: rgb(60, 228, 97);
+    }
+
+    input[type=text] {
+      border: 2px solid rgb(6, 90, 16);
+      padding: 5px;
+      margin: 5px;
+      /*width: 100px;*/
+      -webkit-transition: witdh. 35s ease-in-out;
+      transition: width .35s ease-in-out;
+    }
+
+    input[type=text]:focus {
+      width: 100px;
+      background-color: rgb(60, 228, 97);
+    }
+
+    input[type=email] {
+      border: 2px solid rgb(6, 90, 16);
+      padding: 5px;
+      margin: 5px;
+      /*width: 100px;*/
+      -webkit-transition: witdh. 35s ease-in-out;
+      transition: width .35s ease-in-out;
+    }
+
+    input[type=email]:focus {
+      width: 100px;
+      background-color: rgb(60, 228, 97);
+    }
+
+    input[type=number] {
+      border: 2px solid rgb(6, 90, 16);
+      padding: 5px;
+      margin: 5px;
+      /*width: 100px;*/
+      -webkit-transition: witdh. 35s ease-in-out;
+      transition: width .35s ease-in-out;
+    }
+
+    input[type=number]:focus {
+      width: 100px;
+      background-color: rgb(60, 228, 97);
+    }
+
+    #gorus {
+      width: 300px;
+      height: 150px;
+      border: black solid 2px;
+    }
+
+    #gorus:hover {
+      background-color: rgb(60, 228, 97);
+      border: rgb(0, 0, 0) solid 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <header>
+    <h1> Kitap & Müzik Önerileri </h1>
+  </header>
+  <nav class="menu">
+    <ul class="menu-item">
+      <li>
+        <a href="index.html">Ana Sayfa</a>
+      </li>
+      <li>
+        <a href="tablo.html">Kitap Önerileri Tablosu</a>
+      </li>
+      <li class="dropdown">
+        <a href="#">Kitap Önerileri</a>
+        <ul class="dropdown-content">
+          <li><a href="romantik.html">Romantik</a></li>
+          <li><a href="psikolojik.html">Psikolojik</a></li>
+          <li><a href="klasik.html">Klasik</a></li>
+          <li><a href="fantastik.html">Fantastik</a></li>
+          <li><a href="bilim.html">Bilim Kurgu</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="form.html">Kayıt Sayfası</a>
+      </li>
+
+    </ul>
+  </nav>
+
+
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="tablo.html">Kitap Önerileri Tablosu</a></li>
+      <li><a href="öneri.html">Kitap Önerileri</a></li>
+      <li><a href="#">Romantik</a></li>
+      <li><a href="psikolojik.html">Psikolojik</a></li>
+      <li><a href="#">Klasik</a></li>
+      <li><a href="form.html">Kayıt Sayfası</a></li>
+
+    </ul>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div id="kutu">
+
+    <div class="row">
+
+      <div class="column side">
+      </div>
+
+      <div class="column middle">
+        <center>
+          <h2 style="color: rgb(55, 40, 21);">Kitap Önerileri Sayfası Kayıt Formu</h2>
+          <form action="sonuc.html" method="get">
+        </center>
+
+        <center>
+          <div id="form">
+
+            <div style="display: flex;">
+
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="isim">İsim: &nbsp; &nbsp; &nbsp;</label>
+
+              </div>
+              <input type="text" id="isim" placeholder="İsminizi Girin" name="isim">
+            </div>
+
+            <br>
+            <br>
+
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="soyisim">Soyisim: &nbsp; </label>
+              </div>
+              <input type="text" id="soyisim" placeholder="Soyisminizi Girin" name="soyisim">
+            </div>
+            <br>
+            <br>
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="yaş">Yaş: &nbsp; &nbsp; &nbsp;&nbsp;
+                </label>
+              </div>
+              <input type="number" id="yaş" step="1" min="15" max="100" name="yas">
+            </div>
+            <br>
+            <br>
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="renk">Favori Kitap Rengi: </label>
+              </div>
+              <input type="color" id="renk" name="renk">
+            </div>
+
+            <br>
+            <br>
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="eposta">E-posta Adresinizi Giriniz:
+                </label>
+              </div>
+              <input id="eposta" type="email" name="eposta" required>
+            </div>
+            <br>
+            <br>
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="En Sevdiğiniz Kitap Türü?">En Sevdiğiniz
+                  Kitap Türü?</label>
+              </div>
+            </div>
+            <br>
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="bilim kurgu">Bilim Kurgu </label>
+              </div>
+              <input type="radio" name="ft" id="bilim kurgu" value="1">
+            </div>
+            <br>
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="romatik">Romantik </label>
+              </div>
+              <input type="radio" name="ft" id="romatik" value="1">
+            </div>
+            <br>
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="fantastik">Fantastik </label>
+              </div>
+              <input type="radio" name="ft" id="fantastik" value="1">
+            </div>
+            <br>
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="Dram">Dram </label>
+              </div>
+              <input type="radio" name="ft" id="Dram" value="1">
+            </div>
+            <br>
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="korku">Korku </label>
+              </div>
+              <input type="radio" name="ft" id="korku" value="1">
+            </div>
+            <br>
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="polisiye">Polisiye </label>
+              </div>
+              <input type="radio" name="ft" id="polisiye" value="1">
+            </div>
+            <br>
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="gezi-anı">Gezi-Anı </label>
+              </div>
+              <input type="radio" name="ft" id="gezi-anı" value="1">
+            </div>
+            <br>
+            <br>
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="En Sık Tercih Edilen Alışveriş Sitesi?">En
+                  Sık Tercih Edilen Alışveriş Sitesi? </label>
+              </div>
+              <select name="Platform" id="Platform">
+                <option value="ky">Kitap Yurdu</option>
+                <option value="dr">D&R</option>
+                <option value="ks">Kitap Sepeti</option>
+                <option value="amz">Amazon</option>
+                <option value="ta">Tam Adres</option>
+                <option value="tr">Trendyol</option>
+                <option value="bkm">BKM Kitap</option>
+                <option value="ilkn">İlk Nokta</option>
+              </select>
+            </div>
+            <br>
+            <br>
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="üye">Sitemize Üye Olmak İster Misiniz?
+                </label>
+              </div>
+              <input type="checkbox" name="üye" id="üye" checked>
+            </div>
+            <br>
+            <br>
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <label style="vertical-align: -webkit-baseline-middle;" for="beğeni">Bilgileri Yaralı Buldunuz Mu?
+                </label>
+              </div>
+              <input type="range" name="beğeni" id="beğeni" min="1" max="100" step="5">
+            </div>
+            <br>
+            <br>
+            <div style="display: flex;">
+              <div style="width: 200px;  ">
+                <textarea style="vertical-align: -webkit-baseline-middle;" name="gorus" id="gorus" cols="70" rows="10"
+                  minlength="10" maxlength="200" required placeholder="Sitemiz Hakkında Önerileriniz..."> </textarea>
+              </div>
+
+            </div>
+
+          </div>
+
+          <br>
+          <br>
+        </center>
+
+        <center>
+          <p>
+            <input type="submit" value="Kaydet">
+            <br>
+            <input type="reset">
+          </p>
+        </center>
+
+
+        </form>
+
+      </div>
+    </div>
+    <div class="column side">
+    </div>
+
+
+    <footer>
+      <nav class="footer-menu">
+        <ul>
+
+          <li><a href="hakkımızda.html">Hakkımızda</a></li>
+          <li><a href="hizmet.html">Hizmetler</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </nav>
+    </footer>
+
+
+  </div>
+
+
+
+
+
+
+</body>
+
+</html>

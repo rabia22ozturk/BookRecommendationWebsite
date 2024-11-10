@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonuç</title>
+    <link rel="stylesheet" href="sonuc.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <h1> Kitap & Müzik Önerileri </h1>
+    </header>
+
+    <nav class="menu">
+        <ul class="menu-item">
+            <li>
+                <a href="index.html">Ana Sayfa</a>
+            </li>
+            <li>
+                <a href="tablo.html">Kitap Önerileri Tablosu</a>
+            </li>
+            <li class="dropdown">
+                <a href="#">Kitap Önerileri</a>
+                <ul class="dropdown-content">
+                    <li><a href="romantik.html">Romantik</a></li>
+                    <li><a href="psikolojik.html">Psikolojik</a></li>
+                    <li><a href="klasik.html">Klasik</a></li>
+                    <li><a href="fantastik.html">Fantastik</a></li>
+                    <li><a href="bilim.html">Bilim Kurgu</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="form.html">Kayıt Sayfası</a>
+            </li>
+
+        </ul>
+    </nav>
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="tablo.html">Kitap Önerileri Tablosu</a></li>
+            <li><a href="">Kitap Önerileri</a></li>
+            <li><a href="#">Romantik</a></li>
+            <li><a href="psikolojik.html">Psikolojik</a></li>
+            <li><a href="#">Klasik</a></li>
+            <li><a href="form.html">Kayıt Sayfası</a></li>
+
+        </ul>
+
+    </div>
+
+
+
+
+    <div id="kutu">
+
+        <div class="row">
+
+            <div class="column side"> </div>
+            <div class="column middle">
+                <center>
+                    <h2 style="color: rgb(55, 40, 21);">Kaydınız Alınmıştır</h2>
+                    <div id="sonuctablo">
+                        <script>
+                            var veriler = new URLSearchParams(window.location.search);
+                            var isim = veriler.get('isim');
+                            var soyisim = veriler.get('soyisim');
+                            var eposta = veriler.get('eposta');
+                            var renk = veriler.get('renk');
+                            var gorus = veriler.get('gorus');
+
+
+
+                            document.write("<p> İsim : " + isim + "   </p>");
+                            document.write("<p>Soyisim :" + soyisim + "  </p>");
+                            document.write("<p>E-mail :" + eposta + "  </p>");
+                            document.write("<p> En sevdiğiniz renk: " + renk + " </p>");
+                            document.write("<p> Görüşleriniz: " + gorus + " </p>");
+
+
+                        </script>
+
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </center>
+            </div>
+
+            <div class="column side">
+                <img src="kutlama.webp" alt="kutlama" width="300px">
+            </div>
+
+
+        </div>
+        <footer>
+            <nav class="footer-menu">
+                <ul>
+
+                    <li><a href="hakkımızda.html">Hakkımızda</a></li>
+                    <li><a href="hizmet.html">Hizmetler</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>

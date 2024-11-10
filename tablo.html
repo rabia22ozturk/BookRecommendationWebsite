@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitap Tablosu</title>
+    <link rel="stylesheet" href="tablo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    table {
+        width: 95%;
+        border-collapse: collapse;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 16px;
+        border: 5px solid rgb(6, 90, 16);
+    }
+
+    th {
+        border: 5px solid rgb(6, 90, 16);
+
+    }
+
+    td {
+        border: 5px solid rgb(6, 90, 16);
+
+    }
+
+    td:hover {
+        color: crimson;
+    }
+
+    th:hover {
+        color: darkgreen;
+    }
+
+    caption {
+        font-size: x-large;
+        font
+    }
+
+
+    footer {
+
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-menu ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-menu ul li {
+
+        margin: 0 10px;
+    }
+
+    .footer-menu ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .menu {
+        list-style: none;
+        padding: 0;
+
+    }
+
+    .menu li {
+        position: relative;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgb(6, 90, 16);
+        min-width: 160px;
+        border: solid 4px rgb(4, 44, 9);
+    }
+
+    .menu li:hover .dropdown-content {
+        display: block;
+    }
+
+
+    .menu {
+        list-style: none;
+        padding: 0;
+        text-align: right;
+        /* Menüyü sağa hizala */
+    }
+
+    .menu li {
+        position: relative;
+        display: inline-block;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        /* Menüyü sağ taraftan açılacak şekilde konumlandır */
+        background-color: rgb(6, 90, 16);
+        min-width: 160px;
+    }
+
+    .menu li:hover .dropdown-content {
+        display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+        .menu {
+            text-align: left;
+            /* Ekran küçüldüğünde menüyü sola hizala */
+        }
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+
+
+
+
+    javascript document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu=document.querySelector('.mobile-menu');
+            menu.classList.toggle('active');
+        });
+    
+</style>
+
+<body>
+
+    <header>
+        <h1> Kitap & Müzik Önerileri </h1>
+    </header>
+
+
+    <nav class="menu">
+        <ul class="menu-item">
+            <li>
+                <a href="index.html">Ana Sayfa</a>
+            </li>
+            <li>
+                <a href="tablo.html">Kitap Önerileri Tablosu</a>
+            </li>
+            <li class="dropdown">
+                <a href="#">Kitap Önerileri</a>
+                <ul class="dropdown-content">
+                    <li><a href="romantik.html">Romantik</a></li>
+                    <li><a href="psikolojik.html">Psikolojik</a></li>
+                    <li><a href="klasik.html">Klasik</a></li>
+                    <li><a href="fantastik.html">Fantastik</a></li>
+                    <li><a href="bilim.html">Bilim Kurgu</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="form.html">Kayıt Sayfası</a>
+            </li>
+
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+    <div id="kutu">
+
+
+
+        <div class="row">
+
+            <div class="column side">
+                <div id="paragraf">
+                    <center><b style="font-size: 16px  color: rgb(95, 16, 16);">TARİHTE YAZILAN İLK KİTAP </b>
+                        <img id="kitresim" src="ilkkitap.jpg" alt="kitap" width="200px">
+                    </center>
+                    <p>
+                        Dünyanın ilk kitabının M. S. 868 yılında yazıldığı biliniyor, kitabın adı “Diamond Sutra”.
+                        Diamond, elmas anlamına gelirken Sutra kelimesinin ise dini bilgi ve vaaz anlamını taşıdığı
+                        bilinir.
+                        Kıssalar ve öğütler içeren Diamond Sutra, aynı zamanda dini içerikli bir kitaptır ve Buda'nın
+                        öğretilerini kapsar. </p>
+                </div>
+
+            </div>
+            <div class="column middle">
+                <center>
+
+                    <table border="2">
+                        <caption> <b> Kitap Türleri </b> </caption>
+                        <br>
+                        <br>
+                        <thead>
+
+                            <tr>
+                                <th>Kitap Türü</th>
+                                <th>Kitap Adı</th>
+                                <th>Yayınevi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            <tr>
+                                <td>Psikolojik</td>
+                                <td>İnsanlığımı Yitirirken</td>
+                                <td>İthaki Yayınları</td>
+                            </tr>
+                        </tbody>
+
+
+
+                        <tbody>
+                            <tr>
+                                <td>Psikolojik</td>
+                                <td>Veronika Ölmek İstiyor</td>
+                                <td>Can Yayınları</td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <td>Psikolojik</td>
+                                <td>Zor Bir Ailede Büyümek</td>
+                                <td>İletişim Yayınları</td>
+                            </tr>
+                        </tbody>
+
+
+                        <tbody>
+                            <tr>
+                                <td>Klasik</td>
+                                <td>Dorian Gray'in Portresi</td>
+                                <td>Türkiye İş Bankası Kültür Yayınları</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Klasik</td>
+                                <td>Bir İdam Mahkumunun Son Günü</td>
+                                <td>Türkiye İş Bankası Kültür Yayınları</td>
+                            </tr>
+                        </tbody>
+
+
+
+                        <tbody>
+                            <tr>
+                                <td>Romantik</td>
+                                <td>Çalıkuşu</td>
+                                <td>İnkılap Yayınları</td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <td>Romantik</td>
+                                <td>Jane Eyre</td>
+                                <td>Can Yayınları</td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <td>Fantastik</td>
+                                <td>Dördüncü Kanat</td>
+                                <td>Olimpos Yayınları</td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <td>Fantastik</td>
+                                <td>Bir Karanlık Pencere</td>
+                                <td>Olimpos Yayınları</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Fantastik</td>
+                                <td>Rapsodi</td>
+                                <td>Martı Yayınları</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Bilim Kurgu</td>
+                                <td>Fahrenheit 451</td>
+                                <td>İthaki Yayınları</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Bilim Kurgu</td>
+                                <td>1984</td>
+                                <td>Can Yayınları</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>Bilim Kurgu</td>
+                                <td>Damızk Kızın Öyküsü</td>
+                                <td>DK Yayınları</td>
+                            </tr>
+                        </tbody>
+
+
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">Önerilen Kitap Sayısı</td>
+                                <td>13</td>
+                            </tr>
+                        </tfoot>
+
+
+                    </table>
+                </center>
+
+            </div>
+
+
+
+            <div class="column side">
+
+
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+        </div>
+        <footer>
+            <nav class="footer-menu">
+                <ul>
+
+                    <li><a href="hakkımızda.html">Hakkımızda</a></li>
+                    <li><a href="hizmet.html">Hizmetler</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </footer>
+
+
+    </div>
+</body>
